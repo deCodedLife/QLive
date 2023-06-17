@@ -5,6 +5,9 @@
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
 
+#include <QSslSocket>
+#include <QSslConfiguration>
+
 #include "tobject.h"
 
 class Network : public TObject
@@ -26,6 +29,7 @@ private slots:
 
 private:
     QNetworkAccessManager *m_manager;
+    QSslConfiguration m_conf;
 
 };
 
